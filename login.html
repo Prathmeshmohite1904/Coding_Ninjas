@@ -1,0 +1,1346 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      
+      <!-- Font Links -->
+
+
+      <title></title>
+      <!-- SEO Description -->
+      <meta name="description" content="">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      // render the settings object
+      //console.log('settings', [object Object]);
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#1a73e8',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '#34a853',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '#ea4335',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Roboto, sans-serif', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta name="google-site-verification" content="">
+      <meta name="baidu-verification" content="">
+      <meta name="yandex-verification" content="">
+      <meta name="bing-verification" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="">
+    
+      
+      <!-- Font Links -->
+     
+      <link rel="icon" type="image/x-icon" href="">
+
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Roboto, sans-serif, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+   </body>
+</html><script>window.projectId = "de607de1-0107-49ca-a90a-a182ec791944";</script><div id='RolloutPageContent'><element id="647e3e35-9a9e-4648-9ce7-eac9e981daa8" data-section-id="647e3e35-9a9e-4648-9ce7-eac9e981daa8">
+
+
+<div id="root">
+  <header id="header">
+    <nav class="bg-white shadow-md px-6 py-4 w-full fixed top-0 left-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#hero" class="text-2xl font-bold text-primary-600">
+          <span class="text-[#1a73e8]">Health</span><span class="text-[#ea4335]">Portal</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#hero" class="text-gray-700 hover:text-[#1a73e8] transition-colors">Home</a></li>
+          <li><a href="#signup" class="text-gray-700 hover:text-[#1a73e8] transition-colors">Sign Up</a></li>
+          <li><a href="#login" class="text-gray-700 hover:text-[#1a73e8] transition-colors">Login</a></li>
+          <li><a href="#faq" class="text-gray-700 hover:text-[#1a73e8] transition-colors">FAQ</a></li>
+         
+        </ul>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" aria-label="Open mobile menu" class="md:hidden text-gray-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white absolute top-16 left-0 w-full py-2 shadow-md animate__animated animate__fadeIn">
+        <ul class="flex flex-col space-y-2 px-6">
+          <li><a href="#hero" class="block py-2 text-gray-700 hover:text-[#1a73e8] transition-colors">Home</a></li>
+          <li><a href="#signup" class="block py-2 text-gray-700 hover:text-[#1a73e8] transition-colors">Sign Up</a></li>
+          <li><a href="#login" class="block py-2 text-gray-700 hover:text-[#1a73e8] transition-colors">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+          if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
+            mobileMenuButton.setAttribute('aria-label', 'Close mobile menu');
+            mobileMenuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>';
+          } else {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.setAttribute('aria-label', 'Open mobile menu');
+            mobileMenuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+          }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.setAttribute('aria-label', 'Open mobile menu');
+            mobileMenuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+          });
+        });
+      });
+    </script>
+  </header>
+</div>
+</element><element id="755fb158-a394-4763-bbae-e311f7f54c80" data-section-id="755fb158-a394-4763-bbae-e311f7f54c80">
+
+
+<div id="root">
+  <section id="hero" class="bg-neutral-800 text-white pt-20 md:pt-24 min-h-[70vh] flex items-center">
+    <div class="container mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0 animate__animated animate__fadeInLeft">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Your <span class="text-[#1a73e8]">Health</span> Management
+            <span class="text-[#ea4335]">Portal</span>
+          </h1>
+          <p class="text-lg md:text-xl mb-8 text-gray-300">
+            Create an account to access personalized healthcare services, manage appointments, and connect with healthcare professionals.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#signup" class="bg-[#1a73e8] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+              Sign Up Now
+            </a>
+            <a href="#login" class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+              Login
+            </a>
+          </div>
+          <div class="mt-8 flex items-center text-sm text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#34a853]" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Secure, fast, and compliant with healthcare regulations</span>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 animate__animated animate__fadeInRight">
+          <div class="bg-neutral-700 p-6 md:p-8 rounded-xl shadow-2xl border border-neutral-600 relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#1a73e8]/20 rounded-full"></div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#ea4335]/20 rounded-full"></div>
+            
+            <div class="relative">
+              <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-[#34a853]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                User Roles
+              </h2>
+              
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-neutral-800 p-4 rounded-lg border border-neutral-600 hover:border-[#1a73e8] transition-all cursor-pointer">
+                  <div class="text-[#1a73e8] mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 class="font-bold text-lg">Patient</h3>
+                  <p class="text-gray-400 text-sm">Book appointments and manage your health records</p>
+                </div>
+                
+                <div class="bg-neutral-800 p-4 rounded-lg border border-neutral-600 hover:border-[#ea4335] transition-all cursor-pointer">
+                  <div class="text-[#ea4335] mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <h3 class="font-bold text-lg">Doctor</h3>
+                  <p class="text-gray-400 text-sm">Manage patients and appointment schedules</p>
+                </div>
+                
+                <div class="bg-neutral-800 p-4 rounded-lg border border-neutral-600 hover:border-[#34a853] transition-all cursor-pointer">
+                  <div class="text-[#34a853] mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="font-bold text-lg">Admin</h3>
+                  <p class="text-gray-400 text-sm">Complete system access and management</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#34a853]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-sm text-gray-300">Secure verification</span>
+                </div>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#ea4335]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-sm text-gray-300">Protected data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="ac62e450-d845-4d20-af56-6ea03ffe02a3" data-section-id="ac62e450-d845-4d20-af56-6ea03ffe02a3">
+
+
+<div id="root">
+  <section id="signup" class="bg-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Create Your Account</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Join our healthcare platform to manage appointments, access medical records, and connect with healthcare professionals securely.</p>
+      </div>
+
+      <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+          <!-- Info Section -->
+          <div class="bg-[#1a73e8] text-white p-8 md:w-1/3 animate__animated animate__fadeInLeft">
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold mb-4">Sign Up Benefits</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>Secure access to health records</span>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>Schedule appointments easily</span>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>Direct communication with healthcare providers</span>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>Receive important health notifications</span>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>Role-based access to features</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-auto">
+              <p class="mb-4">Already have an account?</p>
+              <a href="#login" class="inline-block bg-white text-[#1a73e8] font-bold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">Login Here</a>
+            </div>
+          </div>
+
+          <!-- Form Section -->
+          <div class="p-8 md:w-2/3 animate__animated animate__fadeInRight">
+            <form id="signupForm" class="space-y-6">
+              <!-- Step indicator -->
+              <div class="flex justify-between mb-8">
+                <div class="step active flex flex-col items-center w-1/3">
+                  <div class="w-8 h-8 rounded-full bg-[#1a73e8] text-white flex items-center justify-center">1</div>
+                  <span class="text-sm mt-1">Personal Info</span>
+                </div>
+                <div class="step flex flex-col items-center w-1/3">
+                  <div class="w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center">2</div>
+                  <span class="text-sm mt-1">Account Setup</span>
+                </div>
+                <div class="step flex flex-col items-center w-1/3">
+                  <div class="w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center">3</div>
+                  <span class="text-sm mt-1">Verification</span>
+                </div>
+              </div>
+
+              <!-- Step 1: Personal Information -->
+              <div id="step1" class="step-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Enter your full name">
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="your.email@example.com">
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Enter your phone number">
+                    <p class="text-xs text-gray-500 mt-1">We'll send a verification code to this number</p>
+                  </div>
+                  <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Residential Address*</label>
+                    <input type="text" id="address" name="address" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Enter your complete address">
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Select User Role*</label>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="relative">
+                      <input type="radio" id="role-patient" name="userRole" value="patient" class="sr-only peer" checked>
+                      <label for="role-patient" class="flex flex-col items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all peer-checked:border-[#1a73e8] peer-checked:bg-blue-50 hover:bg-gray-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-2 text-[#1a73e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span class="font-medium">Patient</span>
+                        <span class="text-xs text-gray-500 text-center mt-1">Book appointments and access records</span>
+                      </label>
+                    </div>
+                    <div class="relative">
+                      <input type="radio" id="role-doctor" name="userRole" value="doctor" class="sr-only peer">
+                      <label for="role-doctor" class="flex flex-col items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all peer-checked:border-[#ea4335] peer-checked:bg-red-50 hover:bg-gray-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-2 text-[#ea4335]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                        <span class="font-medium">Doctor</span>
+                        <span class="text-xs text-gray-500 text-center mt-1">Manage patients and schedules</span>
+                      </label>
+                    </div>
+                    <div class="relative">
+                      <input type="radio" id="role-admin" name="userRole" value="admin" class="sr-only peer">
+                      <label for="role-admin" class="flex flex-col items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all peer-checked:border-[#34a853] peer-checked:bg-green-50 hover:bg-gray-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-2 text-[#34a853]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span class="font-medium">Admin</span>
+                        <span class="text-xs text-gray-500 text-center mt-1">Full system management</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                  <button type="button" id="nextToStep2" class="px-6 py-2 bg-[#1a73e8] text-white font-medium rounded-lg hover:bg-blue-700 transition-all">Continue</button>
+                </div>
+              </div>
+
+              <!-- Step 2: Account Setup -->
+              <div id="step2" class="step-content hidden">
+                <div class="grid grid-cols-1 gap-6">
+                  <div>
+                    <label for="userId" class="block text-sm font-medium text-gray-700 mb-1">User ID*</label>
+                    <input type="text" id="userId" name="userId" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Create a unique user ID">
+                    <p class="text-xs text-gray-500 mt-1">This will be used for login purposes</p>
+                  </div>
+                  <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password*</label>
+                    <div class="relative">
+                      <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Create a strong password">
+                      <button type="button" id="togglePassword" class="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password*</label>
+                    <div class="relative">
+                      <input type="password" id="confirmPassword" name="confirmPassword" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Confirm your password">
+                      <button type="button" id="toggleConfirmPassword" class="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="password-strength">
+                    <p class="text-sm font-medium text-gray-700 mb-2">Password Strength:</p>
+                    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div id="passwordStrengthBar" class="h-full bg-red-500 transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                    <ul class="mt-3 space-y-1 text-sm">
+                      <li id="length" class="flex items-center text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        At least 8 characters
+                      </li>
+                      <li id="uppercase" class="flex items-center text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Contains uppercase letter
+                      </li>
+                      <li id="lowercase" class="flex items-center text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Contains lowercase letter
+                      </li>
+                      <li id="number" class="flex items-center text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Contains number
+                      </li>
+                      <li id="special" class="flex items-center text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Contains special character
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-between">
+                  <button type="button" id="backToStep1" class="px-6 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all">Back</button>
+                  <button type="button" id="nextToStep3" class="px-6 py-2 bg-[#1a73e8] text-white font-medium rounded-lg hover:bg-blue-700 transition-all">Continue</button>
+                </div>
+              </div>
+
+              <!-- Step 3: Verification -->
+              <div id="step3" class="step-content hidden">
+                <div class="text-center mb-6">
+                  <div class="inline-block p-3 bg-blue-100 rounded-full mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#1a73e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">Verify Your Phone Number</h3>
+                  <p class="text-gray-600">We've sent a 6-digit verification code to <span id="verificationPhone" class="font-medium">your phone number</span></p>
+                </div>
+
+                <div class="max-w-xs mx-auto">
+                  <label for="otpInput" class="block text-sm font-medium text-gray-700 mb-3">Enter Verification Code*</label>
+                  <div class="flex justify-between gap-2">
+                    <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                  </div>
+                  <div class="text-center mt-4">
+                    <div id="countdown" class="text-sm text-gray-600 mb-2">Resend code in <span id="timer">01:59</span></div>
+                    <button type="button" id="resendCode" class="text-[#1a73e8] font-medium text-sm hover:underline" disabled>Resend Code</button>
+                  </div>
+                </div>
+
+                <div class="mt-8 flex justify-between">
+                  <button type="button" id="backToStep2" class="px-6 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all">Back</button>
+                  <button type="submit" id="completeSignup" class="px-6 py-2 bg-[#1a73e8] text-white font-medium rounded-lg hover:bg-blue-700 transition-all">Complete Signup</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Step Navigation
+      const nextToStep2 = document.getElementById('nextToStep2');
+      const nextToStep3 = document.getElementById('nextToStep3');
+      const backToStep1 = document.getElementById('backToStep1');
+      const backToStep2 = document.getElementById('backToStep2');
+      const step1 = document.getElementById('step1');
+      const step2 = document.getElementById('step2');
+      const step3 = document.getElementById('step3');
+      const steps = document.querySelectorAll('.step');
+
+      // Toggle password visibility
+      const togglePassword = document.getElementById('togglePassword');
+      const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+
+      // Password strength checker elements
+      const passwordStrengthBar = document.getElementById('passwordStrengthBar');
+      const lengthCheck = document.getElementById('length');
+      const uppercaseCheck = document.getElementById('uppercase');
+      const lowercaseCheck = document.getElementById('lowercase');
+      const numberCheck = document.getElementById('number');
+      const specialCheck = document.getElementById('special');
+
+      // OTP input elements
+      const otpInputs = document.querySelectorAll('.otp-input');
+      const verificationPhone = document.getElementById('verificationPhone');
+      const phoneInput = document.getElementById('phone');
+      const timerElement = document.getElementById('timer');
+      const resendButton = document.getElementById('resendCode');
+
+      // Form validation - Step 1
+      nextToStep2.addEventListener('click', function() {
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = phoneInput.value;
+        const address = document.getElementById('address').value;
+        
+        // Simple validation (would be more comprehensive in production)
+        if (!fullName || !email || !phone || !address) {
+          alert('Please fill all required fields');
+          return;
+        }
+        
+        if (!validateEmail(email)) {
+          alert('Please enter a valid email address');
+          return;
+        }
+        
+        if (!validatePhone(phone)) {
+          alert('Please enter a valid phone number');
+          return;
+        }
+        
+        // Update verification phone display
+        verificationPhone.textContent = phone;
+        
+        // Show step 2
+        step1.classList.add('hidden');
+        step2.classList.remove('hidden');
+        steps[0].classList.remove('active');
+        steps[1].classList.add('active');
+        steps[1].querySelector('div').classList.remove('bg-gray-300');
+        steps[1].querySelector('div').classList.add('bg-[#1a73e8]', 'text-white');
+      });
+
+      // Password visibility toggle
+      togglePassword.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        togglePasswordIcon(this);
+      });
+
+      toggleConfirmPassword.addEventListener('click', function() {
+        const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        confirmPasswordInput.setAttribute('type', type);
+        togglePasswordIcon(this);
+      });
+
+      function togglePasswordIcon(button) {
+        const icon = button.querySelector('svg');
+        if (icon.innerHTML.includes('eye')) {
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />`;
+        } else {
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`;
+        }
+      }
+
+      // Password strength checker
+      passwordInput.addEventListener('input', checkPasswordStrength);
+
+      function checkPasswordStrength() {
+        const password = passwordInput.value;
+        let strength = 0;
+        
+        const hasLength = password.length >= 8;
+        const hasUppercase = /[A-Z]/.test(password);
+        const hasLowercase = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        
+        updateCheckmark(lengthCheck, hasLength);
+        updateCheckmark(uppercaseCheck, hasUppercase);
+        updateCheckmark(lowercaseCheck, hasLowercase);
+        updateCheckmark(numberCheck, hasNumber);
+        updateCheckmark(specialCheck, hasSpecial);
+        
+        if (hasLength) strength += 20;
+        if (hasUppercase) strength += 20;
+        if (hasLowercase) strength += 20;
+        if (hasNumber) strength += 20;
+        if (hasSpecial) strength += 20;
+        
+        passwordStrengthBar.style.width = strength + '%';
+        
+        if (strength <= 40) {
+          passwordStrengthBar.className = 'h-full bg-red-500 transition-all duration-300';
+        } else if (strength <= 80) {
+          passwordStrengthBar.className = 'h-full bg-yellow-500 transition-all duration-300';
+        } else {
+          passwordStrengthBar.className = 'h-full bg-green-500 transition-all duration-300';
+        }
+      }
+
+      function updateCheckmark(element, isValid) {
+        const icon = element.querySelector('svg');
+        if (isValid) {
+          element.classList.remove('text-gray-500');
+          element.classList.add('text-green-500');
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />';
+        } else {
+          element.classList.remove('text-green-500');
+          element.classList.add('text-gray-500');
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+        }
+      }
+
+      // Form validation - Step 2
+      nextToStep3.addEventListener('click', function() {
+        const userId = document.getElementById('userId').value;
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+        
+        if (!userId || !password || !confirmPassword) {
+          alert('Please fill all required fields');
+          return;
+        }
+        
+        if (password !== confirmPassword) {
+          alert('Passwords do not match');
+          return;
+        }
+        
+        if (password.length < 8 || 
+            !/[A-Z]/.test(password) || 
+            !/[a-z]/.test(password) || 
+            !/[0-9]/.test(password) || 
+            !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+          alert('Password does not meet the security requirements');
+          return;
+        }
+        
+        // Start timer for OTP
+        startTimer(119); // 1:59 in seconds
+        
+        // Show step 3
+        step2.classList.add('hidden');
+        step3.classList.remove('hidden');
+        steps[1].classList.remove('active');
+        steps[2].classList.add('active');
+        steps[2].querySelector('div').classList.remove('bg-gray-300');
+        steps[2].querySelector('div').classList.add('bg-[#1a73e8]', 'text-white');
+      });
+
+      // Handle OTP input
+      otpInputs.forEach((input, index) => {
+        input.addEventListener('keyup', function(e) {
+          // If the input has a value, move to the next input
+          if (this.value.length === 1 && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
+          
+          // If backspace is pressed, move to the previous input
+          if (e.key === 'Backspace' && index > 0) {
+            if (this.value.length === 0) {
+              otpInputs[index - 1].focus();
+            }
+          }
+        });
+      });
+
+      // Timer function for OTP resend
+      function startTimer(duration) {
+        let timer = duration;
+        const interval = setInterval(function() {
+          const minutes = parseInt(timer / 60, 10);
+          const seconds = parseInt(timer % 60, 10);
+          
+          timerElement.textContent = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+          
+          if (--timer < 0) {
+            clearInterval(interval);
+            timerElement.textContent = "00:00";
+            resendButton.disabled = false;
+          }
+        }, 1000);
+      }
+
+      // Resend OTP button
+      resendButton.addEventListener('click', function() {
+        if (!this.disabled) {
+          // In a real implementation, this would trigger an API call to resend the OTP
+          alert('New verification code sent!');
+          startTimer(119); // Restart timer
+          this.disabled = true;
+          
+          // Clear OTP inputs
+          otpInputs.forEach(input => {
+            input.value = '';
+          });
+          otpInputs[0].focus();
+        }
+      });
+
+      // Back buttons
+      backToStep1.addEventListener('click', function() {
+        step2.classList.add('hidden');
+        step1.classList.remove('hidden');
+        steps[1].classList.remove('active');
+        steps[0].classList.add('active');
+        steps[1].querySelector('div').classList.add('bg-gray-300');
+        steps[1].querySelector('div').classList.remove('bg-[#1a73e8]', 'text-white');
+      });
+
+      backToStep2.addEventListener('click', function() {
+        step3.classList.add('hidden');
+        step2.classList.remove('hidden');
+        steps[2].classList.remove('active');
+        steps[1].classList.add('active');
+        steps[2].querySelector('div').classList.add('bg-gray-300');
+        steps[2].querySelector('div').classList.remove('bg-[#1a73e8]', 'text-white');
+      });
+
+      // Form submission
+      document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validate OTP
+        let otp = '';
+        let isOtpValid = true;
+        
+        otpInputs.forEach(input => {
+          if (!input.value) {
+            isOtpValid = false;
+          }
+          otp += input.value;
+        });
+        
+        if (!isOtpValid) {
+          alert('Please enter the complete verification code');
+          return;
+        }
+        
+        // In a real implementation, this would validate the OTP with an API call
+        // For demo, we'll just show a success message
+        alert('Account created successfully! You will be redirected to your dashboard.');
+        
+        // Redirect based on role (in a real implementation)
+        const selectedRole = document.querySelector('input[name="userRole"]:checked').value;
+        console.log(`User registered as: ${selectedRole}`);
+        
+        // Reset form for demo purposes
+        this.reset();
+        step3.classList.add('hidden');
+        step1.classList.remove('hidden');
+        steps.forEach((step, index) => {
+          if (index === 0) {
+            step.classList.add('active');
+          } else {
+            step.classList.remove('active');
+            step.querySelector('div').classList.add('bg-gray-300');
+            step.querySelector('div').classList.remove('bg-[#1a73e8]', 'text-white');
+          }
+        });
+      });
+
+      // Helper functions for validation
+      function validateEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      function validatePhone(phone) {
+        // Simple validation - would be more comprehensive in production
+        const re = /^\d{10,15}$/;
+        return re.test(String(phone).replace(/[^0-9]/g, ''));
+      }
+    });
+  </script>
+</div>
+</element><element id="17f55efe-1b17-4f23-9cee-fe8e7983b2ef" data-section-id="17f55efe-1b17-4f23-9cee-fe8e7983b2ef">
+
+<div id="root">
+  <section id="login" class="bg-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row bg-white rounded-xl shadow-2xl overflow-hidden">
+          <!-- Left Side: Info -->
+          <div class="bg-[#1a73e8] text-white p-8 md:w-2/5 animate__animated animate__fadeInLeft">
+            <div class="h-full flex flex-col">
+              <div>
+                <h2 class="text-3xl font-bold mb-6">Welcome Back</h2>
+                <p class="mb-8">Log in to access your healthcare dashboard and manage your medical information securely.</p>
+                
+                <div class="space-y-6 mb-12">
+                  <div class="flex items-start">
+                    <div class="bg-white/20 p-2 rounded-full mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg">Secure Access</h3>
+                      <p class="text-sm text-blue-100">Your data is protected with enterprise-grade security</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="bg-white/20 p-2 rounded-full mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg">Role-Based Dashboard</h3>
+                      <p class="text-sm text-blue-100">Access features specific to your role</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-auto">
+                <p class="mb-4">Don't have an account yet?</p>
+                <a href="#signup" class="inline-block bg-white text-[#1a73e8] font-bold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">Sign Up Now</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Side: Login Form -->
+          <div class="p-8 md:w-3/5 animate__animated animate__fadeInRight">
+            <div class="flex justify-between items-center mb-8">
+              <h2 class="text-2xl font-bold text-gray-800">Login to Your Account</h2>
+              <div class="text-[#ea4335] font-medium text-sm">* Required fields</div>
+            </div>
+            
+            <form id="loginForm" class="space-y-6">
+              <div id="loginErrorMsg" class="hidden p-4 mb-4 text-sm rounded-lg bg-red-100 text-red-700"></div>
+            
+              <div>
+                <label for="loginUserId" class="block text-sm font-medium text-gray-700 mb-1">User ID <span class="text-[#ea4335]">*</span></label>
+                <input type="text" id="loginUserId" name="loginUserId" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Enter your user ID or email">
+              </div>
+              
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <label for="loginPassword" class="block text-sm font-medium text-gray-700">Password <span class="text-[#ea4335]">*</span></label>
+                  <a href="#" id="forgotPasswordLink" class="text-sm text-[#1a73e8] hover:underline">Forgot Password?</a>
+                </div>
+                <div class="relative">
+                  <input type="password" id="loginPassword" name="loginPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Enter your password">
+                  <button type="button" id="toggleLoginPassword" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <input type="checkbox" id="rememberMe" name="rememberMe" class="h-4 w-4 text-[#1a73e8] focus:ring-[#1a73e8] border-gray-300 rounded">
+                <label for="rememberMe" class="ml-2 block text-sm text-gray-700">Remember me on this device</label>
+              </div>
+              
+              <div>
+                <button type="submit" id="loginButton" class="w-full bg-[#1a73e8] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex justify-center items-center">
+                  <span>Login</span>
+                  <svg id="loginSpinner" class="animate-spin ml-2 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                </button>
+              </div>
+              
+              <div class="relative flex items-center my-6">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="flex-shrink mx-4 text-gray-600">or</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <button type="button" class="flex items-center justify-center py-2 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="#4285F4" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" />
+                  </svg>
+                  <span class="text-sm font-medium">Google</span>
+                </button>
+                
+                <button type="button" class="flex items-center justify-center py-2 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="#3b5998" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  <span class="text-sm font-medium">Facebook</span>
+                </button>
+              </div>
+            </form>
+            
+            <!-- Forgot Password Modal -->
+            <div id="forgotPasswordModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+              <div class="bg-white p-8 rounded-lg w-full max-w-md">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Reset Your Password</h3>
+                <p class="text-gray-600 mb-6">Enter your email address or user ID, and we'll send you a link to reset your password.</p>
+                
+                <form id="forgotPasswordForm" class="space-y-4">
+                  <div>
+                    <label for="resetEmail" class="block text-sm font-medium text-gray-700 mb-1">Email or User ID</label>
+                    <input type="text" id="resetEmail" name="resetEmail" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent" placeholder="Enter your email or user ID">
+                  </div>
+                  
+                  <div class="flex justify-between pt-4">
+                    <button type="button" id="cancelResetPassword" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">Cancel</button>
+                    <button type="submit" class="px-6 py-2 bg-[#1a73e8] text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">Reset Password</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <!-- 2FA Verification Modal -->
+            <div id="twoFactorModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+              <div class="bg-white p-8 rounded-lg w-full max-w-md">
+                <div class="text-center mb-6">
+                  <div class="inline-block p-3 bg-blue-100 rounded-full mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#1a73e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">Two-Factor Authentication</h3>
+                  <p class="text-gray-600">We've sent a 6-digit verification code to your phone number</p>
+                </div>
+                
+                <form id="twoFactorForm" class="space-y-6">
+                  <div class="flex justify-between gap-2">
+                    <input type="text" maxlength="1" class="2fa-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="2fa-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="2fa-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="2fa-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="2fa-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                    <input type="text" maxlength="1" class="2fa-input w-12 h-12 text-center text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a73e8] focus:border-transparent">
+                  </div>
+                  
+                  <div class="text-center">
+                    <div class="text-sm text-gray-600 mb-2">Didn't receive the code?</div>
+                    <button type="button" id="resendTwoFactorCode" class="text-[#1a73e8] font-medium text-sm hover:underline">Resend Code</button>
+                  </div>
+                  
+                  <div class="flex justify-between pt-4">
+                    <button type="button" id="cancelTwoFactor" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">Cancel</button>
+                    <button type="submit" class="px-6 py-2 bg-[#1a73e8] text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">Verify & Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Toggle password visibility
+      const toggleLoginPassword = document.getElementById('toggleLoginPassword');
+      const loginPassword = document.getElementById('loginPassword');
+      
+      toggleLoginPassword.addEventListener('click', function() {
+        const type = loginPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+        loginPassword.setAttribute('type', type);
+        
+        // Toggle icon
+        const icon = this.querySelector('svg');
+        if (type === 'text') {
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />`;
+        } else {
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`;
+        }
+      });
+      
+      // Forgot Password Modal
+      const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+      const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+      const cancelResetPassword = document.getElementById('cancelResetPassword');
+      
+      forgotPasswordLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        forgotPasswordModal.classList.remove('hidden');
+      });
+      
+      cancelResetPassword.addEventListener('click', function() {
+        forgotPasswordModal.classList.add('hidden');
+      });
+      
+      // Close modal when clicking outside
+      forgotPasswordModal.addEventListener('click', function(e) {
+        if (e.target === forgotPasswordModal) {
+          forgotPasswordModal.classList.add('hidden');
+        }
+      });
+      
+      // Forgot Password Form Submission
+      const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+      
+      forgotPasswordForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const resetEmail = document.getElementById('resetEmail').value;
+        
+        if (!resetEmail) {
+          alert('Please enter your email or user ID');
+          return;
+        }
+        
+        // In a real implementation, this would trigger an API call to send a reset link
+        alert('Password reset link sent to your email!');
+        forgotPasswordModal.classList.add('hidden');
+        forgotPasswordForm.reset();
+      });
+      
+      // 2FA Modal
+      const twoFactorModal = document.getElementById('twoFactorModal');
+      const cancelTwoFactor = document.getElementById('cancelTwoFactor');
+      const twoFactorInputs = document.querySelectorAll('.2fa-input');
+      
+      cancelTwoFactor.addEventListener('click', function() {
+        twoFactorModal.classList.add('hidden');
+        twoFactorInputs.forEach(input => {
+          input.value = '';
+        });
+      });
+      
+      // Close modal when clicking outside
+      twoFactorModal.addEventListener('click', function(e) {
+        if (e.target === twoFactorModal) {
+          twoFactorModal.classList.add('hidden');
+          twoFactorInputs.forEach(input => {
+            input.value = '';
+          });
+        }
+      });
+      
+      // Handle 2FA input
+      twoFactorInputs.forEach((input, index) => {
+        input.addEventListener('keyup', function(e) {
+          // If the input has a value, move to the next input
+          if (this.value.length === 1 && index < twoFactorInputs.length - 1) {
+            twoFactorInputs[index + 1].focus();
+          }
+          
+          // If backspace is pressed, move to the previous input
+          if (e.key === 'Backspace' && index > 0) {
+            if (this.value.length === 0) {
+              twoFactorInputs[index - 1].focus();
+            }
+          }
+        });
+      });
+      
+      // 2FA Form Submission
+      const twoFactorForm = document.getElementById('twoFactorForm');
+      
+      twoFactorForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let code = '';
+        let isCodeValid = true;
+        
+        twoFactorInputs.forEach(input => {
+          if (!input.value) {
+            isCodeValid = false;
+          }
+          code += input.value;
+        });
+        
+        if (!isCodeValid) {
+          alert('Please enter the complete verification code');
+          return;
+        }
+        
+        // In a real implementation, this would validate the code with an API call
+        alert('Login successful! You will be redirected to your dashboard.');
+        twoFactorModal.classList.add('hidden');
+        document.getElementById('loginForm').reset();
+      });
+      
+      // Resend 2FA Code
+      const resendTwoFactorCode = document.getElementById('resendTwoFactorCode');
+      
+      resendTwoFactorCode.addEventListener('click', function() {
+        // In a real implementation, this would trigger an API call to resend the code
+        alert('New verification code sent!');
+        
+        // Clear inputs
+        twoFactorInputs.forEach(input => {
+          input.value = '';
+        });
+        twoFactorInputs[0].focus();
+      });
+      
+      // Login Form Submission
+      const loginForm = document.getElementById('loginForm');
+      const loginButton = document.getElementById('loginButton');
+      const loginSpinner = document.getElementById('loginSpinner');
+      const loginErrorMsg = document.getElementById('loginErrorMsg');
+      
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const userId = document.getElementById('loginUserId').value;
+        const password = loginPassword.value;
+        
+        if (!userId || !password) {
+          showLoginError('Please enter both User ID and Password');
+          return;
+        }
+        
+        // Show loading state
+        loginButton.disabled = true;
+        loginSpinner.classList.remove('hidden');
+        
+        // Simulate API call with timeout
+        setTimeout(function() {
+          // In a real implementation, this would validate credentials with an API call
+          if (userId === 'admin@example.com' && password === 'admin123') {
+            // For demo: Show 2FA for admin
+            loginButton.disabled = false;
+            loginSpinner.classList.add('hidden');
+            twoFactorModal.classList.remove('hidden');
+            twoFactorInputs[0].focus();
+          } else if (userId === 'doctor@example.com' && password === 'doctor123') {
+            // For demo: Success message for doctor
+            alert('Login successful! You will be redirected to the doctor dashboard.');
+            loginForm.reset();
+            loginButton.disabled = false;
+            loginSpinner.classList.add('hidden');
+          } else if (userId === 'patient@example.com' && password === 'patient123') {
+            // For demo: Success message for patient
+            alert('Login successful! You will be redirected to the patient dashboard.');
+            loginForm.reset();
+            loginButton.disabled = false;
+            loginSpinner.classList.add('hidden');
+          } else {
+            // Error message
+            showLoginError('Invalid User ID or Password. Please try again.');
+            loginButton.disabled = false;
+            loginSpinner.classList.add('hidden');
+          }
+        }, 1500);
+      });
+      
+      function showLoginError(message) {
+        loginErrorMsg.textContent = message;
+        loginErrorMsg.classList.remove('hidden');
+        
+        // Hide error after 5 seconds
+        setTimeout(function() {
+          loginErrorMsg.classList.add('hidden');
+        }, 5000);
+      }
+    });
+  </script>
+</div></element><element id="c387fdf4-363d-4ee2-9927-326e1b28bae3" data-section-id="c387fdf4-363d-4ee2-9927-326e1b28bae3">
+
